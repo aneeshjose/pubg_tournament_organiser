@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pubg_tournament_organiser/pages/create_tournament.dart';
 import 'contact_details.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -30,14 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: new AppBar(
         title: new Text("PUBG Tournaments"),
       ),
-      body: new Center(
-        child: new ListView(
-          children: <Widget>[
-            new Container(height: 20.0),
-            _listWidget,
-          ],
-        ),
-      ),
+      body: new Center(child: _listWidget),
     );
   }
 
@@ -46,6 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     fetchTournaments();
   }
+
+  TextStyle cardText = new TextStyle(
+    color: Colors.yellow[700],
+  );
 
   void fetchTournaments() async {
     await Firestore.instance
@@ -60,13 +56,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 EdgeInsets.only(left: 1.0, right: 1.0, top: 2.0, bottom: 5.0),
             itemBuilder: (context, index) {
               return new Card(
+                color: Colors.black,
                 child: new Column(
                   children: <Widget>[
-                    new Text(onValue.documents[index]["title"]),
-                    new Text("level:${onValue.documents[index]["level"]}"),
-                    new Text("Ticket fee:${onValue.documents[index]["cost"]}"),
                     new Text(
-                        "Price money:${onValue.documents[index]["price"]}"),
+                      onValue.documents[index]["title"],
+                      style: cardText,
+                    ),
+                    new Text(
+                      "level:${onValue.documents[index]["level"]}",
+                      style: cardText,
+                    ),
+                    new Text(
+                      "Ticket fee:${onValue.documents[index]["cost"]}",
+                      style: cardText,
+                    ),
+                    new Text(
+                      "Price money:${onValue.documents[index]["price"]}",
+                      style: cardText,
+                    ),
                     new RaisedButton(
                       //color: Color(0xFF666666),
                       color: Colors.yellow[600],
