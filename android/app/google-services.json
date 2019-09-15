@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "662250027216",
+    "firebase_url": "https://pubgtournament-52447.firebaseio.com",
+    "project_id": "pubgtournament-52447",
+    "storage_bucket": "pubgtournament-52447.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662250027216:android:d51aa75e156d2a92fec6d5",
+        "android_client_info": {
+          "package_name": "com.sample.pubg_tournament_organiser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662250027216-fmi2tho0026srlg1srtu7ssu2595uq71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sample.pubg_tournament_organiser",
+            "certificate_hash": "25de809e6621dde56cec93fb506ff7615f6f60da"
+          }
+        },
+        {
+          "client_id": "662250027216-cu4jejc8p2r16vvsi758ed12maoinios.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcqDj_pbPAP0RAdw8HGLt6JGmzBVqD4Zg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662250027216-cu4jejc8p2r16vvsi758ed12maoinios.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
