@@ -82,7 +82,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => new ContactDetails(
-                                  onValue.documents[index]))),
+                                  onValue.documents[index],
+                                  onValue.documents[index].documentID))),
                       child: new Text("Contact",
                           style: TextStyle(
                               color: Colors.black,
