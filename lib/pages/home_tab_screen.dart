@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pubg_tournament_organiser/pages/create_tournament.dart';
@@ -16,6 +17,14 @@ class HomeTabsState extends State<HomeTabs>
   void initState() {
     super.initState();
     controller = new TabController(vsync: this, length: 3);
+    FirebaseAuth.instance.currentUser().then((onValue) {
+      if (onValue == null) {
+        print("Not signed in");
+      } else {
+        print(
+            "Signed in as ${onValue.displayName} with email ${onValue.email}");
+      }
+    });
   }
 
   @override
