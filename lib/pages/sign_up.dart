@@ -1,13 +1,12 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:pubg_tournament_organiser/pages/sign_up.dart';
+import 'package:pubg_tournament_organiser/pages/sign_in.dart';
 
-class SignIn extends StatefulWidget {
-  SignInState createState() => new SignInState();
+class SignUp extends StatefulWidget {
+  SignUpState createState() => new SignUpState();
 }
 
-class SignInState extends State<SignIn> {
+class SignUpState extends State<SignUp> {
   String userName, name, emailId, password, confirmPassword;
   @override
   Widget build(BuildContext context) {
@@ -38,15 +37,15 @@ class SignInState extends State<SignIn> {
               child: new Text("Sign UP"),
             ),
             new RaisedButton(
-              onPressed: signIn(context),
+              onPressed: signIn(),
               child: new Text("Sign In"),
             ),
             new RaisedButton(
-              onPressed: signUp(context),
+              onPressed: signUp(),
               child: new Text("Sign UP"),
             ),
             new RaisedButton(
-              onPressed: signInWithGoogle(context),
+              onPressed: signInWithGoogle(),
               child: new Text("Sign In with google"),
             ),
           ],
@@ -55,26 +54,16 @@ class SignInState extends State<SignIn> {
     );
   }
 
-  signUp(BuildContext context) {
+  signUp() {
     //todo implementations
-    FirebaseAuth.instance
-        .createUserWithEmailAndPassword(email: emailId, password: password)
-        .then((onValue) {
-      if (!onValue.isEmailVerified) {
-        print("Email not verified");
-        onValue.sendEmailVerification();
-      } else {
-        Navigator.pop(context);
-      }
-    });
-  }
-
-  signInWithGoogle(BuildContext context) {
-    //todo implementation
   }
 
   signIn(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => new SignUp()));
+        context, MaterialPageRoute(builder: (context) => new SignIn()));
+  }
+
+  signInWithGoogle() {
+    //todo implementation
   }
 }

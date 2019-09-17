@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pubg_tournament_organiser/pages/create_tournament.dart';
 import 'package:pubg_tournament_organiser/pages/home_page.dart';
 import 'package:pubg_tournament_organiser/pages/account.dart';
-import 'package:pubg_tournament_organiser/pages/sign_in.dart';
+import 'package:pubg_tournament_organiser/pages/sign_up.dart';
 
 class HomeTabs extends StatefulWidget {
   @override
@@ -22,7 +22,7 @@ class HomeTabsState extends State<HomeTabs>
       if (onValue == null) {
         print("Not signed in");
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => new SignIn()));
+            context, MaterialPageRoute(builder: (context) => new SignUp()));
       } else {
         print(
             "Signed in as ${onValue.displayName} with email ${onValue.email}");
