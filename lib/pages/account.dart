@@ -19,51 +19,59 @@ class MyAccountState extends State<MyAccount> {
   void initState() {
     super.initState();
     if (!_isSignedIn) {
-      _listWidgets.add(new RaisedButton(
-        color: Colors.yellow[600],
-        onPressed: () => _signIn(),
-        child: Text("Sign In to add 30% of completion",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontFamily: "Teko",
-                fontWeight: FontWeight.w600)),
+      _listWidgets.add(Card(
+        child: new RaisedButton(
+          color: Colors.yellow[600],
+          onPressed: () => _signIn(),
+          child: Text("Sign In to add 30% of completion",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontFamily: "Teko",
+                  fontWeight: FontWeight.w600)),
+        ),
       ));
     }
     if (!_isAddName) {
-      _listWidgets.add(new RaisedButton(
-        color: Colors.yellow[600],
-        onPressed: () => _addName(),
-        child: Text("Add Name for 10% of completion",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontFamily: "Teko",
-                fontWeight: FontWeight.w600)),
+      _listWidgets.add(Card(
+        child: new RaisedButton(
+          color: Colors.yellow[600],
+          onPressed: () => _addName(),
+          child: Text("Add Name for 10% of completion",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontFamily: "Teko",
+                  fontWeight: FontWeight.w600)),
+        ),
       ));
     }
     if (!_isPhoneVerified) {
-      _listWidgets.add(new RaisedButton(
-        color: Colors.yellow[600],
-        onPressed: () => _addPhoneNo(),
-        child: Text("Add phone number for 30% of completion",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontFamily: "Teko",
-                fontWeight: FontWeight.w600)),
+      _listWidgets.add(Card(
+        child: new RaisedButton(
+          color: Colors.yellow[600],
+          onPressed: () => _addPhoneNo(),
+          child: Text("Add phone number for 30% of completion",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontFamily: "Teko",
+                  fontWeight: FontWeight.w600)),
+        ),
       ));
     }
     if (!_isPubgIdEnabled) {
-      _listWidgets.add(new RaisedButton(
-        color: Colors.yellow[600],
-        onPressed: () => _addPubgId(),
-        child: Text("Add PUBG id for 10% of completion",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontFamily: "Teko",
-                fontWeight: FontWeight.w600)),
+      _listWidgets.add(Card(
+        child: new RaisedButton(
+          color: Colors.yellow[600],
+          onPressed: () => _addPubgId(),
+          child: Text("Add PUBG id for 10% of completion",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontFamily: "Teko",
+                  fontWeight: FontWeight.w600)),
+        ),
       ));
     }
     _confirmationWidgets = new Column(
