@@ -37,7 +37,7 @@ class SignUpState extends State<SignUp> {
               child: new Text("Sign UP"),
             ),
             new RaisedButton(
-              onPressed: signIn(),
+              onPressed: signIn(context),
               child: new Text("Sign In"),
             ),
             new RaisedButton(
