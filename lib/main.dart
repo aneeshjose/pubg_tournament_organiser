@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pubg_tournament_organiser/pages/home_page.dart';
 import 'package:pubg_tournament_organiser/pages/home_tab_screen.dart';
 //import 'package:pubg_tournament_organiser/pages/sign_in.dart';
 
