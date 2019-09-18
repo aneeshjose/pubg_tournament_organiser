@@ -34,7 +34,7 @@ class SignInState extends State<SignIn> {
               onChanged: (text) => confirmPassword = text,
             ),
             new RaisedButton(
-              onPressed: signUp(),
+              onPressed: signUp(context),
               child: new Text("Sign UP"),
             ),
             new RaisedButton(
