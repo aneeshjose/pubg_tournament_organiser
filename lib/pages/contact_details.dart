@@ -39,7 +39,7 @@ class _ContactDetailsState extends State<ContactDetails> {
             setState(() {
               buttonPay = new RaisedButton(
                 onPressed: () => showPaymentInfo(),
-                child: new Text("Sow payment option"),
+                child: new Text("Sow payment options"),
               );
             });
           } else {
