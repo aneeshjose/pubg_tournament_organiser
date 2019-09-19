@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'contact_details.dart';
+
+import 'tournament_details.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
