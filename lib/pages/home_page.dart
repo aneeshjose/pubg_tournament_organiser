@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => new ContactDetails(
                                   onValue.documents[index],
                                   onValue.documents[index].documentID))),
-                      child: new Text("Contact",
+                      child: new Text("Details",
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 20.0,
