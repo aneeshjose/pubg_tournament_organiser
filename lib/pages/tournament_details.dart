@@ -4,16 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:pubg_tournament_organiser/pages/payment_options.dart';
 
-class ContactDetails extends StatefulWidget {
-  DocumentSnapshot map;
-
-  ContactDetails(this.map, docId);
-
+class TournamentDetails extends StatefulWidget {
+  final DocumentSnapshot map;
+  final String docId;
+  TournamentDetails(this.map, this.docId);
   @override
-  _ContactDetailsState createState() => _ContactDetailsState();
+  _TournamentDetailsState createState() => _TournamentDetailsState();
 }
 
-class _ContactDetailsState extends State<ContactDetails> {
+class _TournamentDetailsState extends State<TournamentDetails> {
   String docId;
   String _roomPassword = "*******";
   Widget buttonPay = new Container(
@@ -24,6 +23,7 @@ class _ContactDetailsState extends State<ContactDetails> {
   @override
   void initState() {
     super.initState();
+    docId = widget.docId;
     FirebaseAuth.instance.currentUser().then((onValue) {
       if (onValue != null) {
         Firestore.instance

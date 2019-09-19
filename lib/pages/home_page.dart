@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       onPressed: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => new ContactDetails(
+                              builder: (context) => new TournamentDetails(
                                   onValue.documents[index],
                                   onValue.documents[index].documentID))),
                       child: new Text("Details",
